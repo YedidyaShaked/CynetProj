@@ -26,13 +26,13 @@ namespace CovidTracker.Controllers
 
         // GET api/log/{id}
         [HttpGet("{id}")]
-        public ActionResult<IEnumerable<LogReadDto>> GetAllEmployeeLogs(int id)
+        public ActionResult<IEnumerable<LogsReadDto>> GetAllEmployeeLogs(int id)
         {
             try
             {
                 var employeeLogs = _repo.GetAllEmployeeLogs(id);
 
-                return Ok(_mapper.Map<IEnumerable<LogReadDto>>(employeeLogs));
+                return Ok(Utils.CoupleLogs(employeeLogs));
             }
             catch (Exception e)
             {

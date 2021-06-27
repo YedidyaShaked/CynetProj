@@ -1,4 +1,5 @@
-﻿using CovidTracker.Models;
+﻿using CovidTracker.Dtos;
+using CovidTracker.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,27 @@ namespace CovidTracker
             }
 
             return emailList;
+        }
+
+        public static IEnumerable<LogsReadDto> CoupleLogs(IEnumerable<Log> logs)
+        {
+            List<LogsReadDto> logList = new List<LogsReadDto>();
+            LogsReadDto logCouple = new LogsReadDto();
+
+            foreach (Log log in logs)
+            {
+                if(log.IsLogin)
+                {
+                    logCouple = new LogsReadDto() { LoginTime = log.LogTime, LogoutTime = null };
+                    logList.Add(logCouple);
+                }
+                else
+                {
+                    logCouple.LogoutTime = log.LogTime;
+                }
+            }
+
+            return logList;
         }
     }
 }
