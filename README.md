@@ -8,11 +8,11 @@ Run the app and find the 'Swagger UI' at https://localhost:5001/swagger/.
 
 You can add employees using this code:
 
-insert into Employees values('Yedidya Shaked','ddshaked1@gmail.com',0)
-insert into Employees values('Moshe Cohen','moshec@gmail.com',0)
-insert into Employees values('nelly','nelly@gmail.com',0)
-insert into Employees values('Shimon Bell','shimonb@gmail.com',0)
-insert into Employees values('Avi Tate','avit@gmail.com',0)
-insert into Employees values('Yoni Shaked','yonisak@gmail.com',0)
+insert into Employees values('Yedidya Shaked','ddshaked1@gmail.com',0);
+insert into Employees values('Moshe Cohen','moshec@gmail.com',0);
+insert into Employees values('nelly','nelly@gmail.com',0);
+insert into Employees values('Shimon Bell','shimonb@gmail.com',0);
+insert into Employees values('Avi Tate','avit@gmail.com',0);
+insert into Employees values('Yoni Shaked','yonisak@gmail.com',0);
 
 Thanks :)
